@@ -1,0 +1,57 @@
+.JobCard {
+  margin: auto;
+  padding: 30px;
+
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 5px;
+  box-shadow: 0 10px 1000px var(--desaturated-dark-cyan);
+}
+
+.job-info {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  color: var(--desaturated-dark-cyan);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.job-position {
+  font-size: 0.8rem;
+}
+
+.job-footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--dark-grayish-cyan);
+}
+
+.job-tags-container {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  color: var(--desaturated-dark-cyan);
+  background-color: var(light-grayish-cyan-filter);
+
+  border-radius: 5px;
+
+  padding: 6px;
+}

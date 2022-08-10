@@ -1,0 +1,9 @@
+.Header {
+  width: 100%;
+  height: 100px;
+
+  background-image: url('../../../public/images/bg-header-desktop.svg');
+  background-size: cover;
+
+  margin-bottom: 50px;
+}
