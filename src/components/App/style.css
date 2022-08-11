@@ -23,6 +23,5 @@ html, input, button {
 }
 
 .App {
-  height: 100vh;
   background-color: var(--light-grayish-cyan-background);
 }

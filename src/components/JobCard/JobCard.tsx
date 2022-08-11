@@ -1,4 +1,5 @@
 import React from "react";
+import Tag from "../Tag/Tag";
 import './style.css'
 
 interface JobData {
@@ -22,8 +23,10 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({ jobData }) => {
+  // const cardClassName = jobData.new ? `JobCard new` : `JobCard`
+  
   return (
-    <div className="JobCard">
+    <div className='JobCard'>
       <div className="job-info">
         <div className="image-container">
           <img src={jobData.logo} alt={`${jobData.company} logo`} />
@@ -45,13 +48,21 @@ const JobCard: React.FC<JobCardProps> = ({ jobData }) => {
         </div>
       </div>
       <div className="job-tags-container">
-        <strong className="tag">{jobData.role}</strong>
-        <strong className="tag">{jobData.level}</strong>
-        {jobData.languages.map((language, idx) => {
-          return <strong className="tag" key={idx}>{language}</strong>
-        })}
+        <button className="search-button">
+          <Tag text={jobData.role}/>
+        </button>
+        <button className="search-button">
+          <Tag text={jobData.level}/>
+        </button>
+        {jobData.languages.map((language, idx) => (
+          <button className="search-button">
+            <Tag key={idx} text={language}/>
+          </button>
+        ))}
         {jobData.tools.map((tool, idx) => (
-          <strong className="tag" key={idx}>{tool}</strong>
+          <button className="search-button">
+            <Tag key={idx} text={tool}/>
+          </button>
         ))}
       </div>
     </div>

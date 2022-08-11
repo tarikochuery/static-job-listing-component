@@ -7,7 +7,9 @@ const JobsList = () => {
   const jobsList = jobData
   return (
     <div className="JobsList">
-      <JobCard jobData={jobsList[0]} />
+      {jobsList.map((job, idx) => (
+        <JobCard key={idx} jobData={job} />
+      ))}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 .JobCard {
   margin: auto;
   padding: 30px;
+  margin-bottom: 20px;
 
   width: 80%;
   display: flex;
@@ -8,19 +9,21 @@
   align-items: center;
 
   border-radius: 5px;
-  box-shadow: 0 10px 1000px var(--desaturated-dark-cyan);
+  box-shadow: 0 10px 30px hsla(180, 29%, 50%, 0.3);
+  background-color: #fff;
 }
 
 .job-info {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
+  width: 35%;
+  display: flex; 
 }
 
 .job-information {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  margin-left: 30px;
 }
 
 .card-header {
@@ -31,6 +34,11 @@
 
 .job-position {
   font-size: 0.8rem;
+}
+
+.job-position:hover {
+  color: var(--desaturated-dark-cyan);
+  cursor: pointer;
 }
 
 .job-footer {
@@ -44,14 +52,21 @@
 .job-tags-container {
   width: 35%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .tag {
   color: var(--desaturated-dark-cyan);
-  background-color: var(light-grayish-cyan-filter);
+  background-color: hsla(180, 29%, 50%, 0.1);
 
   border-radius: 5px;
 
-  padding: 6px;
+  padding: 8px;
+  margin-right: 15px;
+}
+
+.tag:hover {
+  cursor: pointer;
+  background-color: var(--desaturated-dark-cyan);
+  color: #fff;
 }
