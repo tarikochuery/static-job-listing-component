@@ -3,11 +3,12 @@ import './style.css'
 
 interface TagProps {
   text: string
+  handleFilterSelection?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
-const Tag: React.FC<TagProps> = ({ text }) => {
+const Tag: React.FC<TagProps> = ({ text, handleFilterSelection }) => {
   return (
-    <strong className="tag">{text}</strong>
+    <button className="tag" onClick={handleFilterSelection} value={text}>{text}</button>
   )
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import Tag from "../Tag/Tag";
 import './style.css'
 
-interface JobData {
+export interface JobData {
   id: number,
   company: string,
   logo: string,
@@ -19,11 +19,11 @@ interface JobData {
 }
 
 interface JobCardProps {
-  jobData: JobData
+  jobData: JobData,
+  handleFilterSelection: (e: React.MouseEvent<HTMLElement>) => void
 }
 
-const JobCard: React.FC<JobCardProps> = ({ jobData }) => {
-  // const cardClassName = jobData.new ? `JobCard new` : `JobCard`
+const JobCard: React.FC<JobCardProps> = ({ jobData, handleFilterSelection }) => {
   
   return (
     <div className='JobCard'>
@@ -47,22 +47,14 @@ const JobCard: React.FC<JobCardProps> = ({ jobData }) => {
           </div>
         </div>
       </div>
-      <div className="job-tags-container">
-        <button className="search-button">
-          <Tag text={jobData.role}/>
-        </button>
-        <button className="search-button">
-          <Tag text={jobData.level}/>
-        </button>
+      <div className="job-tags-container">       
+          <Tag text={jobData.role} handleFilterSelection={handleFilterSelection}/>
+          <Tag text={jobData.level} handleFilterSelection={handleFilterSelection}/>
         {jobData.languages.map((language, idx) => (
-          <button className="search-button">
-            <Tag key={idx} text={language}/>
-          </button>
+            <Tag key={idx} text={language} handleFilterSelection={handleFilterSelection}/>
         ))}
         {jobData.tools.map((tool, idx) => (
-          <button className="search-button">
-            <Tag key={idx} text={tool}/>
-          </button>
+            <Tag key={idx} text={tool} handleFilterSelection={handleFilterSelection}/>
         ))}
       </div>
     </div>

@@ -14,7 +14,7 @@
 }
 
 .job-info {
-  width: 35%;
+  width: 45%;
   display: flex; 
 }
 
@@ -34,6 +34,7 @@
 
 .job-position {
   font-size: 0.8rem;
+  width: fit-content;
 }
 
 .job-position:hover {
@@ -43,7 +44,7 @@
 
 .job-footer {
   display: flex;
-  width: 100%;
+  width: 70%;
   align-items: center;
   justify-content: space-between;
   color: var(--dark-grayish-cyan);
@@ -55,18 +56,7 @@
   justify-content: flex-end;
 }
 
-.tag {
-  color: var(--desaturated-dark-cyan);
-  background-color: hsla(180, 29%, 50%, 0.1);
-
-  border-radius: 5px;
-
-  padding: 8px;
+.search-button {
+  background: none;
   margin-right: 15px;
-}
-
-.tag:hover {
-  cursor: pointer;
-  background-color: var(--desaturated-dark-cyan);
-  color: #fff;
 }

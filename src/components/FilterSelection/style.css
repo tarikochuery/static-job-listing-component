@@ -1,0 +1,46 @@
+.no-filter {
+  visibility: hidden;
+}
+
+.FilterSelection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  position: relative;
+  top: -85px;
+
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 30px;
+  width: 80%;
+
+  border-radius: 5px;
+  box-shadow: 0 10px 30px hsla(180, 29%, 50%, 0.3);
+}
+
+.selected-filter-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  flex-wrap: wrap;
+}
+
+.filter-container {
+  display: flex;
+  margin: 10px 5px;
+}
+
+.delete-icon-container {
+  background-color: var(--desaturated-dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.delete-icon-container:hover {
+  cursor: pointer;
+  background-color: var(--very-dark-grayish-cyan);
+}
