@@ -3,12 +3,13 @@ import './style.css'
 
 interface TagProps {
   text: string
-  handleFilterSelection?: (e: React.MouseEvent<HTMLElement>) => void
+  handleFilterSelection?: (e: React.MouseEvent<HTMLElement>) => void,
+  marginBottom?: string
 }
 
-const Tag: React.FC<TagProps> = ({ text, handleFilterSelection }) => {
+const Tag: React.FC<TagProps> = ({ text, handleFilterSelection, marginBottom }) => {
   return (
-    <button className="tag" onClick={handleFilterSelection} value={text}>{text}</button>
+    <button style={{marginBottom: marginBottom}} className="tag" onClick={handleFilterSelection} value={text}>{text}</button>
   )
 }
 

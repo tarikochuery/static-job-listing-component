@@ -58,13 +58,17 @@ const JobsList = () => {
     deleteFilter(filter)
   }
 
+  const handleClear = () => {
+    setFiltersList([])
+  }
+
   useEffect(() => {
     filterJobs(filtersList)
   }, [filtersList])
 
   return (
     <div className="job-list-container">
-      <FilterSelection filtersSelected={filtersList} handleDeleteFilter={handleDelete}/>
+      <FilterSelection filtersSelected={filtersList} handleDeleteFilter={handleDelete} handleClear={handleClear}/>
       <div className="JobsList">
         {filteredJobs.map((job, idx) => (
           <JobCard key={idx} jobData={job} handleFilterSelection={handleAdd}/>

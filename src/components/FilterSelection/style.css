@@ -36,11 +36,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 5px;
+  padding: 5px 5px;
   border-radius: 5px;
 }
 
 .delete-icon-container:hover {
   cursor: pointer;
   background-color: var(--very-dark-grayish-cyan);
+}
+
+.clear {
+  color: var(--dark-grayish-cyan);
+  background: none;
+}
+
+.clear:hover {
+  color: var(--desaturated-dark-cyan);
+  cursor: pointer;
+
+  border-bottom: 1px solid var(--desaturated-dark-cyan);
 }

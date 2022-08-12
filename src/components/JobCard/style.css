@@ -14,7 +14,7 @@
 }
 
 .job-info {
-  width: 45%;
+  width: 50%;
   display: flex; 
 }
 
@@ -30,6 +30,29 @@
   color: var(--desaturated-dark-cyan);
   font-size: 0.8rem;
   font-weight: 400;
+
+  display: flex;
+  align-items: center;
+
+  width: 60%;
+}
+
+.new {
+  background-color: var(--desaturated-dark-cyan);
+  color: #fff;
+  
+  margin-left: 10px;
+  padding: 5px 9px;
+  border-radius: 20px;
+}
+
+.featured {
+  background-color: var(--very-dark-grayish-cyan);
+  color: #fff;
+
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
 }
 
 .job-position {
@@ -59,4 +82,50 @@
 .search-button {
   background: none;
   margin-right: 15px;
+}
+
+@media (max-width: 1040px) {
+  .JobCard {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    min-width: 325px;
+
+    padding: 20px;
+    margin-top: 70px;
+  }
+
+  .job-info{
+    flex-direction: column;
+    margin-top: -60px;
+    margin-bottom: 20px;
+    width: 100%;
+
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--dark-grayish-cyan);
+  }
+
+  .job-information{
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+
+  .card-header {
+    margin-bottom: 15px;
+  }
+
+  .job-position {
+    font-size: 0.6rem;
+    margin-bottom: 15px;
+  }
+
+  .job-tags-container {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .job-tags-container:first-child{
+    margin-bottom: 20px;
+  }
 }
