@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# Frontend Mentor - Job listings with filtering solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-### `yarn start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Users should be able to:
 
-### `yarn test`
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Filter job listings based on the categories
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshot
 
-### `yarn build`
+![Print Desktop No Filter](./screenshots/print-list-no-filter-deskyop.png)
+![Print Desktop Filter](./screenshots/print-list-filter-desktop.png)
+![Print Mobile No Filter](./screenshots/print-list-no-filter-mobile.png)
+![Print Mobile Filter](./screenshots/print-list-filter-mobile.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Solution URL: [GitHub Repository](https://github.com/tarikochuery/static-job-listing-component)
+- Live Site URL: [Static List Component](https://static-job-listing-component-312nj8m84-tarikochuery.vercel.app/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## My process
 
-### `yarn eject`
+### Built with
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Flexbox
+- [React](https://reactjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - Programming Language
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### What I learned
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+On this project I learned how to map through a list to render these components:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```tsx
+<div className="JobsList">
+  {filteredJobs.map((job, idx) => (
+    <JobCard key={idx} jobData={job} />
+  ))}
+</div>
+```
 
-## Learn More
+So I could understand how similar components can receive a db data through properties, and how to access these properties in order to fill the dinamic information in each child component.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Continued development
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For my next project I look forward to use styled components with TypeScript, so I can style the project by a easier way.
+
+## Author
+
+- Website - [Tarik Chuery](https://github.com/tarikochuery)
+- Frontend Mentor - [@tarikochuery](https://www.frontendmentor.io/profile/tarikochuery)
+- LinkedIn - [Tarik Chuery](https://www.linkedin.com/in/tarik-chuery/)
